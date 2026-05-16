@@ -75,7 +75,7 @@ function makeSummary(){
  lines.push("","■お名前",data.name||"未入力","","■電話番号",data.phone||"未入力","","■現在のお身体の状態",data.concerns.length?data.concerns.join("、"):"未選択","","■当院を知ったキッカケ",data.source||"未選択");
  if(data.sourceOther)lines.push("その他："+data.sourceOther);
  lines.push("","■事前に伝えておきたいこと",data.note||"なし");
- return lines.join("\\n")
+ return lines.join("\n")
 }
 function confirm(){return `<div class="question-title">入力内容をご確認ください😊</div><p>内容にお間違いがなければ、下のボタンから送信してください。</p><div class="summary">${makeSummary()}</div><div class="buttons"><button class="secondary" onclick="back()">戻る</button><button class="primary" onclick="submitForm()">この内容で予約希望を送信する</button></div>`}
 function submitForm(){page=5;render()}
